@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./restaurantStyles.css">
+
+
+    <title>Contact Us | Something Fishy</title>
+
+    <script>
+    function validateItems(){
+    var fname = document.forms["contactForm"]["fname"].value;
+    var lname = document.forms["contactForm"]["lname"].value;
+    var phone = document.forms["contactForm"]["phone"].value;
+
+    if (fname == "") {
+      alert("First name must be filled out");
+      return false;
+    }
+
+    if (lname == "") {
+      alert("Last name must be filled out");
+      return false;
+    }
+
+    if (isNaN(phone)) {
+      alert("Please enter a valid number. Do Not include any additional charaters")
+      return false;
+    }
+  }
+    </script>
+
+    <noscript>This site looks best with Javascript Enabled</noscript>
+
+  </head>
+
+  <body>
+
+    <div class="jumbotron jumbotron-fluid">
+      <h2>Something Fishy is Opening A New Location!</h2>
+      <p>456 Peach Street Boulevard, Ocean Town, Maine 12011</p>
+    </div>
+
+    <div id="infoSlider" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100" src="images/drinkOTM.jpg" alt="new drink of the month">
+        <div class="carousel-caption d-none d-md-block">
+          <h1 class="logo">Something Fishy</h1>
+          <h5>The Drink of the Month</h5>
+          <p>Aqua De Lima</p>
+          </div>
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="images/newlocation.jpg" alt="new restaurant location">
+        <div class="carousel-caption d-none d-md-block">
+          <h1 class="logo">Something Fishy</h1>
+          <h5>Something's Fishy in Ocean Town</h5>
+          <p>Look Out For Our New Location!</p>
+          </div>
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="images/seasonalmenu.jpg" alt="seasonal menu advertisment">
+        <div class="carousel-caption d-none d-md-block">
+          <h1 class="logo">Something Fishy</h1>
+          <h5>Try Our New Seasonal Menu</h5>
+          <p>Your Winter Favorites Are Back!</p>
+          </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#infoSlider" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#infoSlider" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+        <nav class="nav nav-pills nav-fill flex-colum flex-sm-row">
+          <hr>
+          <a class="nav-item nav-link" href="./home.html">Home</a>
+          <a class="nav-item nav-link" href="./menu.html">Menu</a>
+          <a class="nav-item nav-link active" href="./contact.html">Contact Us</a>
+          <hr>
+      </nav>
+
+    <main>
+
+      <form name="contactForm" onsubmit="return validateItems()">
+        <div class="form-row mt-4 col-md-12">
+          <div class="form-group col-md-4">
+            <label for="fname">First Name</label>
+          <input type="text" class="form-control" id="fname" placeholder="Sam">
+          </div>
+          <div class="form-group col-md-4">
+            <label for="lname">Last Name</label>
+          <input type="text" class="form-control" id="lname" placeholder="Smith">
+        </div>
+      </div>
+        <div class="form-group col-md-8">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" id="email" placeholder="Email">
+        </div>
+        <div class="form-group col-md-8">
+          <label for="phone">Phone Number</label>
+          <input type="text" class="form-control" name="phone" id="phone" placeholder="##########">
+        </div>
+          <div class="form-group col-md-4">
+            <label for="inquiry">Reason For Inquiry</label>
+              <select class="form-control" id="inquiry">
+                <option selected>Catering</option>
+                <option>Private Party</option>
+                <option>Feedback</option>
+                <option>Other</option>
+              </select>
+          </div>
+
+            <div class="form-group col-md-6">
+              <label>Have You Been Here Before?</label>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="beenBefore" id="yes" value="yes" checked>
+                <label class="form-check-label" for="yes">Yes</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="beenBefore" id="no" value="no">
+                <label class="form-check-label" for="no">No</label>
+              </div>
+            </div>
+
+          <div class="form-group col-md-8">
+            <label for="addinfo">Additional Information</label>
+            <textarea class="form-control" id="addinfo" rows="4"></textarea>
+          </div>
+        <div class="form-group col-md-8">
+        <label>Best Day to Contact You:</label>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="M" value="M">
+          <label class="form-check-label" for="inlineCheckbox1">M</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="T" value="T">
+          <label class="form-check-label" for="inlineCheckbox2">T</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="W" value="W" >
+          <label class="form-check-label" for="W">W</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="Th" value="Th">
+          <label class="form-check-label" for="inlineCheckbox1">Th</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="F" value="F">
+          <label class="form-check-label" for="inlineCheckbox1">F</label>
+        </div>
+
+        <div class="form-group row">
+        <div class="col-sm-10">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+
+      </form>
+
+    </main>
+
+      <footer>
+        <hr>
+        <p>123 Seasisde Shore, Beach City, ME 10110 <br>(201)-555-5004</p>
+      </footer>
+
+      <!--JS, Popper.js, and jQuery-->
+     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
